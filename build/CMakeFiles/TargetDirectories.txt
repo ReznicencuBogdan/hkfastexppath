@@ -1,3 +1,3 @@
-D:/Local Projects/ConEmuCDScript/build/CMakeFiles/ConEmuCD.dir
-D:/Local Projects/ConEmuCDScript/build/CMakeFiles/ALL_BUILD.dir
-D:/Local Projects/ConEmuCDScript/build/CMakeFiles/ZERO_CHECK.dir
+D:/Local Projects/Github Projects/hkfastexppath/build/CMakeFiles/ConEmuCD.dir
+D:/Local Projects/Github Projects/hkfastexppath/build/CMakeFiles/ALL_BUILD.dir
+D:/Local Projects/Github Projects/hkfastexppath/build/CMakeFiles/ZERO_CHECK.dir

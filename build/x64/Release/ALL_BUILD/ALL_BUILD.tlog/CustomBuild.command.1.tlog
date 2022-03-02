@@ -1,6 +1,6 @@
-^D:\LOCAL PROJECTS\CONEMUCDSCRIPT\CMAKELISTS.TXT
+^D:\LOCAL PROJECTS\GITHUB PROJECTS\HKFASTEXPPATH\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Local Projects/ConEmuCDScript" "-BD:/Local Projects/ConEmuCDScript/build" --check-stamp-file "D:/Local Projects/ConEmuCDScript/build/CMakeFiles/generate.stamp"
+"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Local Projects/Github Projects/hkfastexppath" "-BD:/Local Projects/Github Projects/hkfastexppath/build" --check-stamp-file "D:/Local Projects/Github Projects/hkfastexppath/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

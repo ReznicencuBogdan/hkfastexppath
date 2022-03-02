@@ -36,11 +36,14 @@ public:
 	WSTRING PATH;
 };
 
-int main(int argc, const char** argv)
+
+extern "C" __declspec(dllexport) 
+int 
+WINAPI
+WriteLastExplorerPathBuffer(wchar_t *output_buffer, int max_byte_count)
 {
 	IShellWindows* pIShellWindows;
-
-	CoInitializeEx(NULL, COINIT_MULTITHREADED);
+	int max_wide_count = max_byte_count / 2;
 
 	if (!SUCCEEDED(CoCreateInstance(CLSID_ShellWindows, NULL, CLSCTX_ALL, IID_IShellWindows, (void**)&pIShellWindows)))
 	{
@@ -64,7 +67,7 @@ int main(int argc, const char** argv)
 		{
 			if (SUCCEEDED(pIWebBrowserApp->get_HWND((LONG_PTR*)&hwndShell)))
 			{
-				if( IsIconic(hwndShell) || !IsWindowVisible(hwndShell) )
+				if( /*IsIconic(hwndShell) ||*/ !IsWindowVisible(hwndShell) )
 				{
 					continue;
 				}
@@ -121,13 +124,53 @@ int main(int argc, const char** argv)
 
 		if(it != std::end(listOfActiveShells))
 		{
-			std::wcout << L"\"" << it->PATH << L"\"";
-			break;
+			if(it->PATH.length() >= max_wide_count + 3)
+			{
+				return 0;
+			}
+
+			if (std::swprintf(output_buffer, max_wide_count, L"\"%s\"", it->PATH.c_str()) < 0)
+			{
+				return 0;
+			}
+
+		   return 1;
 		}
 	}
 	while (window = GetWindow(window, GW_HWNDNEXT));
 
 	return 0;
+}
+
+
+BOOL WINAPI DllMain(
+    HINSTANCE hinstDLL,  // handle to DLL module
+    DWORD fdwReason,     // reason for calling function
+    LPVOID lpReserved )  // reserved
+{
+    // Perform actions based on the reason for calling.
+    switch( fdwReason ) 
+    { 
+        case DLL_PROCESS_ATTACH:
+         CoInitializeEx(NULL, COINIT_MULTITHREADED); // not recommened ?
+         DisableThreadLibraryCalls(hinstDLL);
+         // Initialize once for each new process.
+         // Return FALSE to fail DLL load.
+            break;
+
+        case DLL_THREAD_ATTACH:
+         // Do thread-specific initialization.
+            break;
+
+        case DLL_THREAD_DETACH:
+         // Do thread-specific cleanup.
+            break;
+
+        case DLL_PROCESS_DETACH:
+         // Perform any necessary cleanup.
+            break;
+    }
+    return TRUE;  // Successful DLL_PROCESS_ATTACH.
 }
 
 

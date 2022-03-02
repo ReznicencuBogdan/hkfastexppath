@@ -1,4 +1,4 @@
-# Install script for directory: D:/Local Projects/ConEmuCDScript
+# Install script for directory: D:/Local Projects/Github Projects/hkfastexppath
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Local Projects/ConEmuCDScript/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Local Projects/Github Projects/hkfastexppath/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

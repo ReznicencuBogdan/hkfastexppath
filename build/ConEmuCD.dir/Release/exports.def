@@ -1,0 +1,30 @@
+EXPORTS 
+	??_R0?AVbad_alloc@std@@@8 	 DATA
+	??_R0?AVbad_array_new_length@std@@@8 	 DATA
+	??_R0?AVexception@std@@@8 	 DATA
+	?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA 	 DATA
+	??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z
+	??$_Destroy_range@V?$allocator@VSHELLDATA@@@std@@@std@@YAXPEAVSHELLDATA@@QEAV1@AEAV?$allocator@VSHELLDATA@@@0@@Z
+	??$_Emplace_reallocate@AEAPEAUHWND__@@V?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@?$vector@VSHELLDATA@@V?$allocator@VSHELLDATA@@@std@@@std@@QEAAPEAVSHELLDATA@@QEAV2@AEAPEAUHWND__@@$$QEAV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@1@@Z
+	??$_Uninitialized_move@PEAVSHELLDATA@@V?$allocator@VSHELLDATA@@@std@@@std@@YAPEAVSHELLDATA@@QEAV1@0PEAV1@AEAV?$allocator@VSHELLDATA@@@0@@Z
+	??0bad_alloc@std@@QEAA@AEBV01@@Z
+	??0bad_array_new_length@std@@QEAA@AEBV01@@Z
+	??0bad_array_new_length@std@@QEAA@XZ
+	??0exception@std@@QEAA@AEBV01@@Z
+	??1bad_array_new_length@std@@UEAA@XZ
+	??1exception@std@@UEAA@XZ
+	?_Change_array@?$vector@VSHELLDATA@@V?$allocator@VSHELLDATA@@@std@@@std@@AEAAXQEAVSHELLDATA@@_K1@Z
+	?_Reallocate_exactly@?$vector@VSHELLDATA@@V?$allocator@VSHELLDATA@@@std@@@std@@AEAAX_K@Z
+	?_Throw_bad_array_new_length@std@@YAXXZ
+	?_Tidy_deallocate@?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@AEAAXXZ
+	?_Xlen_string@std@@YAXXZ
+	?_Xlength@?$vector@VSHELLDATA@@V?$allocator@VSHELLDATA@@@std@@@std@@CAXXZ
+	?allocate@?$allocator@VSHELLDATA@@@std@@QEAAPEAVSHELLDATA@@_K@Z
+	?allocate@?$allocator@_W@std@@QEAAPEA_W_K@Z
+	?assign@?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@QEAAAEAV12@QEB_W_K@Z
+	?deallocate@?$allocator@VSHELLDATA@@@std@@QEAAXQEAVSHELLDATA@@_K@Z
+	?what@exception@std@@UEBAPEBDXZ
+	DllMain
+	WriteLastExplorerPathBuffer
+	__local_stdio_printf_options
+	swprintf
